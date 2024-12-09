@@ -2,6 +2,7 @@ import React from 'react';
 import { FaBell } from 'react-icons/fa6';
 import { FcLike } from 'react-icons/fc';
 import { IoIosSettings } from 'react-icons/io';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -48,7 +49,7 @@ export default function Navbar() {
 
         {/* Avatar */}
         <div className="w-8 h-8 rounded-full overflow-hidden">
-          <img
+          <Image
             src="/boy.png"
             alt="User Avatar"
             className="w-full h-full object-cover"

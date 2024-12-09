@@ -12,6 +12,7 @@ const CarCard: React.FC<{
   price: number;
   discountedPrice?: number;
   favoriteIcon: string;
+  
 }> = ({
   name,
   type,
@@ -22,18 +23,20 @@ const CarCard: React.FC<{
   price,
   discountedPrice,
   favoriteIcon,
+  
+
 }) => {
   return (
     <div className="flex flex-col p-4 bg-white rounded-lg shadow-md border border-gray-200">
       {/* Favorite Icon */}
-      <img
+      <Image
         src={favoriteIcon}
         alt="Favorite"
         className="absolute top-4 right-4 w-6 cursor-pointer"
       />
 
       {/* Car Image */}
-      <img
+      <Image
         src={image}
         alt={`${name} car`}
         className="w-full h-40 object-contain mb-4"
@@ -82,6 +85,7 @@ const CarRecommendationPage: React.FC = () => {
       capacity: "5 seats",
       price: 99.00,
       favoriteIcon: "/heart-icon.png",
+      favorite: true,
     },
     {
       name: "NissanGT-R",
@@ -93,6 +97,7 @@ const CarRecommendationPage: React.FC = () => {
       price: 80.00,
       discountedPrice: 100.00,
       favoriteIcon: "/heart-icon.png",
+      favorite: false,
     },
     {
       name: "Rolls-Royce",
@@ -115,7 +120,7 @@ const CarRecommendationPage: React.FC = () => {
       discountedPrice: 100.00,
       favoriteIcon: "/heart-icon.png",
     },
-    <div></div>
+   
     {
       name: "AllNewRush",
       type: "SUV",
